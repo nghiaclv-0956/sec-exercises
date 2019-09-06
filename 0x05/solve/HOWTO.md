@@ -17,11 +17,11 @@ Payload từ 1 - 100, cho ra độ dài đúng là 21 <br>
 
 <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/length.png">
 
-Tiếp tục sử dụng Intruder, với payload là Brute Force (default từ a-z, 0-9, min length = 0, max length = 1) để Blind SQL Injection, mất khoảng gần 1 phút và ra flag<br>
+Tiếp tục sử dụng Intruder, với payload là Brute Force (default từ a-z, 0-9, min length = 0, max length = 1) để Blind SQL Injection, mất khoảng gần 1 phút và ra flag <b> flag kpwa4ji3uzk6trpk </b><br>
 
 <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/pass.png">
 
-<b> flag kpwa4ji3uzk6trpk </b>
+<br>
 Position số 5 thử lại với các ký tự đặc biệt và ra kết quả là <b> _ </b>
 Vậy flag là <b>flag_kpwa4ji3uzk6trpk</b>
 
@@ -35,7 +35,7 @@ Do đề bài là SQLi nên cứ SQLi cho dễ:
 2. Thay đổi type attack trong Intruder sang Cluster bomb
 3. Do đã có chính xác các ký trong password, ta thay đổi lại payloads để Brute Force (đỡ phải BF nhiều ký tự không cần thiết)
 
-<img href="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/command.png">
+<img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/command.png">
 
 </p>
 
