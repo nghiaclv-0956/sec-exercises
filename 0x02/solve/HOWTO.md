@@ -16,7 +16,7 @@ Bao gồm 1 trang đăng nhập tại: http://ctfq.sweetduet.info:10080/~q35/aut
 Và Source Code:
 <pre>
 
-<?php
+<php
 
 function h($s)
 {
@@ -50,9 +50,9 @@ Từ Source Code, đặc biệt là đoạn:
 $s = $db->prepare('SELECT * FROM user WHERE id=? AND password=?');
 </pre>
 <br>
-Ta có thể thấy trang login không dính SQL Injection. Login thử cũng không có Cookie, Session.
-Bỏ qua XSS vì đề bài là <b>"Simple Auth 2"</b>
-Cũng không include() hay require() bất cứ file nào để có thể dính File Inclusion
+Ta có thể thấy trang login không dính SQL Injection. Login thử cũng không có Cookie, Session. <br>
+Bỏ qua XSS vì đề bài là <b>"Simple Auth 2"</b> <br>
+Cũng không include() hay require() bất cứ file nào để có thể dính File Inclusion <br>
 
 
 
