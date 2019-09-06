@@ -57,15 +57,13 @@ Bỏ qua XSS vì đề bài là <b>"Simple Auth 2"</b> và đây là tấn công
 
 Cũng không include() hay require() bất cứ file nào để có thể dính File Inclusion <br>
 
-Ngoài ra đây là Source Code PHP bên  dưới:
+Ngoài ra đây là Source Code bên  dưới:
 <article>
 <pre>
-<?php if($try and $ok) { ?>
         <div class="alert alert-success">
           Congraturation!<br>
           The flag is <?php echo h($_POST['password']); ?>
         </div>
-<?php } ?>
 </pre>
 </article>
 
