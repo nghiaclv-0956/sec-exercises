@@ -15,7 +15,7 @@ Link: http://ksnctf.sweetduet.info/problem/35 <br>
 Bao gồm 1 trang đăng nhập tại: http://ctfq.sweetduet.info:10080/~q35/auth.php <br>
 Và Source Code:
 <article>
-<mark>
+<pre>
 <?php
 
 function h($s)
@@ -41,7 +41,7 @@ if ($_POST['id']!=='' or $_POST['password']!=='')
 }
 
 ?>
-</mark>
+</pre>
 </article>
 
 
