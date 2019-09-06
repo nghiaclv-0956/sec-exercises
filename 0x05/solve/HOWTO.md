@@ -45,7 +45,7 @@ Tấn công và nhận kết quả, ứng với mỗi position sẽ ra ký tự 
 <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/result.png">
 
 
-<i> <b> Tấn công với Pitchfork</b></i>
+<i> <b> Hoặc tấn công với Pitchfork</b></i>
 
 <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/result2.png">
 
