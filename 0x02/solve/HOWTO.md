@@ -50,8 +50,8 @@ Từ Source Code, đặc biệt là đoạn:
 $s = $db->prepare('SELECT * FROM user WHERE id=? AND password=?');
 </pre>
 <br>
-Ta có thể thấy trang login không dính SQL Injectionể. Login thử cũng không có Cookie, Session. <br>
-Bỏ qua XSS vì đề bài là <b>"Simple Auth 2"</b> <br>
+Ta có thể thấy trang login không dính SQL Injection. Login thử cũng không có Cookie, Session. <br>
+Bỏ qua XSS vì đề bài là <b>"Simple Auth 2"</b> <br> và đây là tấn công Sever Side, code cũng khá cẩn thận với hàm htmlspecialchars() <br>
 Cũng không include() hay require() bất cứ file nào để có thể dính File Inclusion <br>
 
 Ngoài ra đây là Source Code PHP bên  dưới:
@@ -66,7 +66,7 @@ Ngoài ra đây là Source Code PHP bên  dưới:
 </pre>
 </article>
 
-Vậy Password cũng chính là mật khẩu. Với kinh nghiệm từ những bài trước thì thường Flag sẽ có 21 ký tự, song song với đó là chưa biết username. Vậy phương án Brute Force cũng gần như không thể
+Vậy Password cũng chính là mật khẩu. Với kinh nghiệm từ những bài trước thì thường Flag sẽ có 21 ký tự, song song với đó là chưa biết username. Vậy phương án Brute Force cũng gần như không thể.
 
 
 
