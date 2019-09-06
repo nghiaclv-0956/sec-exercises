@@ -50,7 +50,7 @@ OA
 <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/result2.png">
 
 <br>
-Position có Length 2361 là đúng ký tự, Có Length 769 thì chỉ việc thay bằng chữ IN HOA
+Position có Length 2361 là đúng ký tự, Có Length 769 thì chỉ việc thay bằng chữ HOA
 
 <pre> FLAG_KpWa4ji3uZk6TrPK </pre>
 
