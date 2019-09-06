@@ -32,7 +32,7 @@ Tuy nhiên submit với <b>id = admin</b> và <b>password = flag_kpwa4ji3uzk6trp
 Tại đây có 2 hướng, một là tạo từ điển mật khẩu từ Flag đã biết (21 ký tự), 2 là Blind Injection theo cách khác.
 Do đề bài là SQLi nên cứ SQLi cho dễ:
 
-1. Thay đổi câu lệnh SQL để Blind SQLi
+1. Thay đổi câu lệnh SQL
 2. Thay đổi type attack trong Intruder sang Cluster bomb
 3. Do đã có chính xác các ký trong password, ta thay đổi lại payloads để Brute Force (đỡ phải BF nhiều ký tự không cần thiết)
 
@@ -40,6 +40,8 @@ Do đề bài là SQLi nên cứ SQLi cho dễ:
 
 <br>
 Tấn công và nhận kết quả, ứng với mỗi position sẽ ra ký tự tương ứng. Nhìn không theo thứ tự lắm nhưng tấn công chỉ mất 1p, ráp lại cũng chỉ tốn khoảng 1 phút. Ước gì có 2 màn hình nhìn cho dễ @@ <br>
+
+<img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/result.png">
 
 <pre> FLAG_KpWa4ji3uZk6TrPK </pre>
 
