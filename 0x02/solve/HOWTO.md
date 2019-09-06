@@ -14,7 +14,7 @@ Dùng Postman, Request với KEY là <b>password[]</b> và VALUE bất kỳ, ta 
 Link: http://ksnctf.sweetduet.info/problem/35 <br>
 Bao gồm 1 trang đăng nhập tại: http://ctfq.sweetduet.info:10080/~q35/auth.php <br>
 Và Source Code:
-<pre>
+<article>
 
 <php
 
@@ -42,7 +42,7 @@ if ($_POST['id']!=='' or $_POST['password']!=='')
 
 ?>
 
-</pre>
+</article>
 
 
 Từ Source Code, đặc biệt là đoạn:
