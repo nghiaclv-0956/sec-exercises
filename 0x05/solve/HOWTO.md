@@ -9,7 +9,7 @@ The flag is admin's password.
 </pre>
 Cộng với việc tại trang chủ có nội dung  <b>First, login as "admin". </b> <br>
 
-Như vậy ta phải SQLi để lấy mật khẩu <br>
+Như vậy ta phải SQLi để lấy mật khẩu, với tên đăng nhập là <b>admin</b> <br>
 
 Chuyển request sang Intruder, tại đây ta SQLi để dò độ dài mật khẩu. Khá giống với 1 challange trên Hacker101<br>
 
