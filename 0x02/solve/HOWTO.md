@@ -51,18 +51,20 @@ $s = $db->prepare('SELECT * FROM user WHERE id=? AND password=?');
 </pre>
 <br>
 Ta có thể thấy trang login không dính SQL Injection. Login thử cũng không có Cookie, Session. <br>
-Bỏ qua XSS vì đề bài là <b>"Simple Auth 2"</b> <br> và đây là tấn công Sever Side, code cũng khá cẩn thận với hàm htmlspecialchars() <br>
+
+Bỏ qua XSS vì đề bài là <b>"Simple Auth 2"</b> và đây là tấn công Sever Side, code cũng khá cẩn thận với hàm htmlspecialchars() <br>
+
 Cũng không include() hay require() bất cứ file nào để có thể dính File Inclusion <br>
 
 Ngoài ra đây là Source Code PHP bên  dưới:
 <article>
 <pre>
+
 <?php if($try and $ok) { ?>
         <div class="alert alert-success">
           Congraturation!<br>
           The flag is <?php echo h($_POST['password']); ?>
         </div>
-<?php } ?>
 </pre>
 </article>
 
