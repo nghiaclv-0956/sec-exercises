@@ -38,7 +38,7 @@ Bài này chỉ có 20point, về lý không thể khó hơn bài 2 50point đư
 Và vấn đề được gỡ khi để ý đoạn code: <br>
 <pre> $db = new PDO('sqlite:database.db');</pre><br>
 
-Vậy là ngoài file <b>auth.php</b> sẽ còn có file <b>database.db</b>
+Vậy là ngoài file <b>auth.php</b> sẽ còn có file <b>database.db</b> <br>
 Ta sửa đường dẫn URL thành: <pre> ctfq.sweetduet.info:10080/~q35/database.db </pre> <br>
 
 Browser tự động tải về 1 file <b>database.db</b>, mở file lên ta có được username và password chính là Flag cần tìm.
