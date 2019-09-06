@@ -17,7 +17,7 @@ Payload từ 1 - 100, cho ra độ dài đúng là 21 <br>
 
 <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/length.png">
 
-Tiếp tục sử dụng Intruder, với payload là Brute Force (default từ a-z, 0-9, min length = 0, max length = 1) để Blind SQL Injection, mất khoảng gần 1 phút và ra flag <b> flag kpwa4ji3uzk6trpk </b><br>
+Tiếp tục sử dụng Intruder, với payload là Brute Force (default từ a-z, 0-9) để Blind SQL Injection, mất khoảng gần 1 phút và ra flag <b> flag kpwa4ji3uzk6trpk </b><br>
 
 <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/pass.png">
 
@@ -25,7 +25,8 @@ Tiếp tục sử dụng Intruder, với payload là Brute Force (default từ a
 Position số 5 thử lại với các ký tự đặc biệt và ra kết quả là <b> _ </b>
 Vậy flag là <b>flag_kpwa4ji3uzk6trpk</b>
 
-Tuy nhiên submit với <b>id = admin</b> và <b>password = flag_kpwa4ji3uzk6trpk</b> không thành công
+Tuy nhiên submit với <b>id = admin</b> và <b>password = flag_kpwa4ji3uzk6trpk</b> không thành công <br>
+
 => Khả năng có phân biệt chữ thường và chữ IN HOA. Và khi thêm payloads chữ HOA vào Intruder(Brute Force) thì đúng là như vậy. Tuy nhiên với câu lệnh SQL trên thì không thể phân biệt LENGTH response khi payload là chữ thường/HOA. <br>
 
 Tại đây có 2 hướng, một là tạo từ điển mật khẩu từ Flag đã biết (21 ký tự), 2 là Blind Injection theo cách khác.
@@ -36,6 +37,12 @@ Do đề bài là SQLi nên cứ SQLi cho dễ:
 3. Do đã có chính xác các ký trong password, ta thay đổi lại payloads để Brute Force (đỡ phải BF nhiều ký tự không cần thiết)
 
 <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/command.png">
+
+<br>
+Tấn công và nhận kết quả, ứng với mỗi position sẽ ra ký tự tương ứng. Nhìn không theo thứ tự lắm nhưng tấn công chỉ mất 1p, ráp lại cũng chỉ tốn khoảng 1 phút. Ước gì có 2 màn hình nhìn cho dễ @@ <br>
+
+<pre> FLAG_KpWa4ji3uZk6TrPK </pre>
+
 
 </p>
 
