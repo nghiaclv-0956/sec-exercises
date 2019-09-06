@@ -59,13 +59,13 @@ Cũng không include() hay require() bất cứ file nào để có thể dính 
 Ngoài ra đây là Source Code PHP bên  dưới:
 
 <pre>
-<code>
+<artical>
 <?php if($try and $ok) { ?>
         <div class="alert alert-success">
           Congraturation!<br>
           The flag is <?php echo h($_POST['password']); ?>
         </div>
-</code>
+</artical>
 </pre>
 
 
