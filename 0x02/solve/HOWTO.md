@@ -14,38 +14,10 @@ Dùng Postman, Request với KEY là <b>password[]</b> và VALUE bất kỳ, ta 
 
 Link: http://ksnctf.sweetduet.info/problem/35 <br>
 Bao gồm 1 trang đăng nhập tại: http://ctfq.sweetduet.info:10080/~q35/auth.php <br>
-Và Source Code:
-<article>
-<pre>
-<?php
+Và Source Code: <br>
+<img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x02/images/code2.png">
 
-function h($s)
-{
-    return htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
-}
-
-if (!isset($_POST['id']) or !is_string($_POST['id']))
-    $_POST['id'] = '';
-if (!isset($_POST['password']) or !is_string($_POST['password']))
-    $_POST['password'] = '';
-
-$try = false;
-$ok = false;
-
-if ($_POST['id']!=='' or $_POST['password']!=='')
-{
-    $try = true;
-    $db = new PDO('sqlite:database.db');
-    $s = $db->prepare('SELECT * FROM user WHERE id=? AND password=?');
-    $s->execute(array($_POST['id'], $_POST['password']));
-    $ok = $s->fetch() !== false;
-}
-
-?>
-</pre>
-</article>
-
-
+<br>
 Từ Source Code, đặc biệt là đoạn:
 <pre>
 $s = $db->prepare('SELECT * FROM user WHERE id=? AND password=?');
