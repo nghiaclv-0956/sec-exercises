@@ -8,9 +8,15 @@ Don't worry.
 The flag is admin's password.
 </pre>
 Cộng với việc tại trang chủ có nội dung  <b>First, login as "admin". </b> <br>
-Như vậy ta phải SQLi để lấy mật khẩu, tên đăng nhập là admin.
-Chuyển request sang Intruder, tại đây ta SQLi để dò độ dài mật khẩu. <br>
 
+Như vậy ta phải SQLi để lấy mật khẩu <br>
 
+Chuyển request sang Intruder, tại đây ta SQLi để dò độ dài mật khẩu. Khá giống với 1 challange trên Hacker101<br>
+
+Payload từ 1 - 100, cho ra độ dài đúng là 21 <br>
+
+<img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/length.png">
+Tiếp tục sử dụng Intruder, với payload là Brute Force để Blind Injection <br>
+<img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/pass.png">
 </p>
 
