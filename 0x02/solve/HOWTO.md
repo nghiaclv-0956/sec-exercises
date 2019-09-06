@@ -60,10 +60,11 @@ Cũng không include() hay require() bất cứ file nào để có thể dính 
 Ngoài ra đây là Source Code bên  dưới:
 <article>
 <pre>
-        <div class="alert alert-success">
+        <?php if($try and $ok) { ?>
+        class="alert alert-success">
           Congraturation!<br>
           The flag is <?php echo h($_POST['password']); ?>
-        </div>
+<?php } ?>
 </pre>
 </article>
 
