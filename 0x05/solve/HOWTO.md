@@ -33,7 +33,7 @@ Tại đây có 2 hướng, một là tạo từ điển mật khẩu từ Flag 
 Do đề bài là SQLi nên cứ SQLi cho dễ:
 
 1. Thay đổi câu lệnh SQL
-2. Thay đổi type attack trong Intruder sang Cluster bomb
+2. Thay đổi type attack trong Intruder sang Cluster bomb hoặc Pitchfork
 3. Do đã có chính xác các ký trong password, ta thay đổi lại payloads để Brute Force (đỡ phải BF nhiều ký tự không cần thiết)
 
 <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/command.png">
@@ -41,7 +41,16 @@ Do đề bài là SQLi nên cứ SQLi cho dễ:
 <br>
 Tấn công và nhận kết quả, ứng với mỗi position sẽ ra ký tự tương ứng. Nhìn không theo thứ tự lắm nhưng tấn công chỉ mất 1p, ráp lại cũng chỉ tốn khoảng 1 phút. Ước gì có 2 màn hình nhìn cho dễ @@ <br>
 
+<i> <b> Tấn công với Cluster Bomb</b></i>
 <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/result.png">
+
+
+<i> <b> Tấn công với Pitchfork</b></i>
+OA
+<img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/result2.png">
+
+<br>
+Position có Length 2361 là đúng ký tự, Có Length 769 thì chỉ việc thay bằng chữ IN HOA
 
 <pre> FLAG_KpWa4ji3uZk6TrPK </pre>
 
