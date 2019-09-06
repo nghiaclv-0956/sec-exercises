@@ -46,7 +46,7 @@ Tấn công và nhận kết quả, ứng với mỗi position sẽ ra ký tự 
 
 
 <i> <b> Tấn công với Pitchfork</b></i>
-OA
+
 <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/result2.png">
 
 <br>
