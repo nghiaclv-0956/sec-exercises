@@ -25,14 +25,24 @@ $s = $db->prepare('SELECT * FROM user WHERE id=? AND password=?');
 <br>
 Ta có thể thấy trang login không dính SQL Injection. Login thử cũng không có Cookie, Session. <br>
 
-Bỏ qua XSS vì đề bài là <b>"Simple Auth 2"</b> và đây là tấn công Sever Side, code cũng khá cẩn thận với hàm htmlspecialchars() <br>
+Bỏ qua XSS vì đây là tấn công Sever Side (Simple Auth 2), code cũng khá cẩn thận với hàm htmlspecialchars() <br>
 
 Cũng không include() hay require() bất cứ file nào để có thể dính File Inclusion <br>
 
 Ngoài ra đây là Source Code bên  dưới: <br>
 <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x02/images/code.png">
 
-Vậy Password cũng chính là mật khẩu. Với kinh nghiệm từ những bài trước thì thường Flag sẽ có 21 ký tự, song song với đó là chưa biết username. Vậy phương án Brute Force cũng gần như không thể.
+Vậy Password cũng chính là mật khẩu. Với kinh nghiệm từ những bài trước thì thường Flag sẽ có 21 ký tự, song song với đó là chưa biết username. Vậy phương án Brute Force cũng gần như không thể.<br>
 
+Bài này chỉ có 20point, về lý không thể khó hơn bài 2 50point được.<br>
+Và vấn đề được gỡ khi để ý đoạn code: <br>
+<pre> $db = new PDO('sqlite:database.db');</pre><br>
+
+Vậy là ngoài file <b>auth.php</b> sẽ còn có file <b>database.db</b>
+Ta sửa đường dẫn URL thành: <pre> ctfq.sweetduet.info:10080/~q35/database.db </pre> <br>
+
+Browser tự động tải về 1 file <b>database.db</b>, mở file lên ta có được username và password chính là Flag cần tìm.
+
+<img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x02/images/resultb4.png">
 
 
