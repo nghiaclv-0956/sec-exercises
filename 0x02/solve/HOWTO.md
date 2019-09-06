@@ -57,7 +57,7 @@ Bỏ qua XSS vì đề bài là <b>"Simple Auth 2"</b> và đây là tấn công
 Cũng không include() hay require() bất cứ file nào để có thể dính File Inclusion <br>
 
 Ngoài ra đây là Source Code PHP bên  dưới:
-<artical>
+
 <pre>
 <?php if($try and $ok) { ?>
         <div class="alert alert-success">
@@ -67,7 +67,7 @@ Ngoài ra đây là Source Code PHP bên  dưới:
 <?php } ?>
 
 </pre>
-</artical>
+
 
 Vậy Password cũng chính là mật khẩu. Với kinh nghiệm từ những bài trước thì thường Flag sẽ có 21 ký tự, song song với đó là chưa biết username. Vậy phương án Brute Force cũng gần như không thể.
 
