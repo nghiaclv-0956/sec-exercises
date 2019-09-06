@@ -61,7 +61,7 @@ Ngoài ra đây là Source Code bên  dưới:
 <article>
 <pre>
           Congraturation!<br>
-          The flag is <?php echo h($_POST['password']); ?>
+          The flag is <php echo h($_POST['password']); ?>
 </pre>
 </article>
 
