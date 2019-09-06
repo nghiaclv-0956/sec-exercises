@@ -16,6 +16,7 @@ Chuyển request sang Intruder, tại đây ta SQLi để dò độ dài mật k
 Payload từ 1 - 100, cho ra độ dài đúng là 21 <br>
 
 <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/length.png">
+
 Tiếp tục sử dụng Intruder, với payload là Brute Force để Blind SQL Injection <br>
 
 <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x05/images/pass.png">
