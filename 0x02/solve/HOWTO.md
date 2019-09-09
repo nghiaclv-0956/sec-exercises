@@ -45,4 +45,8 @@ Browser tự động tải về 1 file <b>database.db</b>, mở file lên ta có
 
 <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x02/images/resultb4.png">
 
+-----------------------------------------------------------------------------------------------------------------------------------<br>
+<b>BÀI 3</b>
+LINK: http://ksnctf.sweetduet.info/problem/31
+Gồm 1 trang có 2 Submit Button đơn giản và source code của nó.
 
