@@ -135,7 +135,7 @@ Trong đó:<br><pre>
 <b>Input Signature</b>: Chính là hashed cookie được web trả về, mặc định đúng vì được web hashed và gán cho Client.<br>
 <b>Input data</b>: Value dùng làm salt, ta biết được nhờ value của ship.<br>
 <b>Input Key Length</b>: Độ dài của value được băm, ta không biết được nội dung nhưng biết độ dài là 21 (chính là Flag).<br>
-<b>Input Data to Add</b>: Là dữ liệu muốn thêm vào để được một dữ liệu mới hợp lệ. Do mặc định mỗi khi Submit thì các value được hàm implode() nối thêm một dấu phẩy phía trước, nên value thêm vào ta điền <b>,10</b> <br><pre>
+<b>Input Data to Add</b>: Là dữ liệu muốn thêm vào để được một dữ liệu mới hợp lệ. Do mặc định mỗi khi Submit thì các value được hàm implode() nối thêm một dấu phẩy phía trước, nên value thêm vào ta điền <b>,10</b> <br></pre>
 
 Rất tiếc khi chạy thì không thành công, và vấn đề nằm ở đoạn: <br>
 
