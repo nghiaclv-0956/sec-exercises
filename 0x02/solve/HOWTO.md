@@ -111,6 +111,8 @@ Khi submit form, ta sẽ có 2 cookie là <b>ship</b> = $s  và <b>signature</b>
 <br>
 <br>
 Và đoạn code phía dưới <br>
+
+
 ```php
 <?php
 
