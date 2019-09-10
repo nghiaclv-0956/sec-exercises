@@ -103,7 +103,7 @@ if (isset($_POST['submit']))
 ```
 <br>
 Ta thấy Flag được lưu ở param $salt. <br>
-Nhìn vào đoạn code trên và xem Cookie của web, ta thấy rằng mỗi khi Submit Form, param $ship sẽ được random một value ngẫu nhiên từ 0 => 9. <br>
+Nhìn vào đoạn code trên và xem Cookie của web, ta thấy rằng mỗi khi Submit, param $ship sẽ được random một value ngẫu nhiên từ 0 => 9. <br>
 Những param này sẽ được chuyển thành một string, ngăn cách bởi dấu "," nhờ vào hàm implode(), và được lưu vào param $s. <br>
 Param $sign sẽ chứa value khi hashing bằng SHA512 với data nằm ở param $salt và salt nằm ở param $s <br>
 Khi submit form, ta sẽ có 2 cookie là <b>ship</b> = $s  và <b>signature</b> = $sign
@@ -119,4 +119,17 @@ for ($i=0; $i<count($ship); $i++)
 <br>
 Nhìn vào đoạn source code trên, ta thấy không thể nào in ra được position số 10 (chứa $salt = Flag), do value $ship có max value =9 <br>
 
-Vậy bây giờ phải làm sao đấy để ta có được value hashed với $s = 10, và nó dẫn dắt tới một loại tấn công tên "hash length extension attack" <br>
+Vậy bây giờ phải làm sao đấy để ta có được value hashed với $s = 10, và nó dẫn dắt tới một loại tấn công tên "hash length extension attack" và tool được biết đến nhiều nhất là HashPump<br>
+
+Cài đặt và chạy HashPump:<br>
+
+
+<br>
+Trong đó:
+Input Signature: Chính là hashed cookie được web trả về, mặc định đúng vì được web hashed và gán cho Client.<br>
+Input data: Value dùng làm salt, ta biết được nhờ value của ship.<br>
+Input Key Length: Độ dài của value được băm, ta không biết được nội dung nhưng biết độ dài là 21 (chính là Flag).<br>
+Input Data to Add: Là dữ liệu muốn thêm vào để được một dữ liệu mới hợp lệ. Do mặc định mỗi khi Submit thì các value được hàm implode() nối thêm một dấu phẩy phía trước, nên value thêm vào ta điền <b>,10</b> <br>
+
+Rất tiếc khi chạy thì không thành công, và vấn đề nằm ở đoạn:
+<pre> x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xb0,10 <pre> <br>
