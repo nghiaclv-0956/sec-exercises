@@ -108,6 +108,7 @@ Những param này sẽ được chuyển thành một string, ngăn cách bởi
 Param $sign sẽ chứa value khi hashing bằng SHA512 với data nằm ở param $salt và salt nằm ở param $s <br>
 Khi submit form, ta sẽ có 2 cookie là <b>ship</b> = $s  và <b>signature</b> = $sign
 <br>
+
 ```php
 <?php
 
@@ -116,6 +117,7 @@ for ($i=0; $i<count($ship); $i++)
 
 ?>
 ```
+
 <br>
 Nhìn vào đoạn source code trên, ta thấy không thể nào in ra được position số 10 (chứa $salt = Flag), do value $ship có max value =9 <br>
 
