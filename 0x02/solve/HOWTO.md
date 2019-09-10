@@ -105,9 +105,10 @@ if (isset($_POST['submit']))
 Ta thấy Flag được lưu ở param $salt. <br>
 Nhìn vào đoạn code trên và xem Cookie của web, ta thấy rằng mỗi khi Submit, param  <b>$ship</b> sẽ được random một value ngẫu nhiên từ 0 => 9. <br>
 Những param này sẽ được chuyển thành một string, ngăn cách bởi dấu "," nhờ vào hàm implode(), và được lưu vào param  <b>$s</b>. <br>
-Param  <b>$sign</b> sẽ chứa value khi hashing bằng SHA512 với data nằm ở param <b>$salt</b> và salt nằm ở param  <b>$s</b> <br>
+Param  <b>$sign</b> sẽ chứa value khi hashing bằng SHA512 với data nằm ở param <b>$salt</b> và salt* nằm ở param  <b>$s</b> <br>
 Khi submit form, ta sẽ có 2 cookie là <b>ship = $s</b>  và <b>signature = $sign</b>
 <br>
+<i>'*': salt được dịch nôm là <b>muối</b>, là thứ được thêm vào để băm cùng nội dung được băm, kiến thức này liên quan tới crypto nên chỉ biết sơ qua.</i>
 <br>
 <br>
 Và đoạn code phía dưới <br>
