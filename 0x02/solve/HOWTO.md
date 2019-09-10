@@ -128,7 +128,7 @@ Nhìn vào đoạn source code trên, ta thấy không thể nào in ra được
 Vậy bây giờ phải làm sao đấy để ta có được value hashed với <b>$s = 10</b>, và nó dẫn dắt tới một loại tấn công tên "hash length extension attack" và tool được biết đến nhiều nhất là <b>HashPump</b><br>
 
 Cài đặt và chạy HashPump:<br>
-
+<img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x02/images/Screenshot%20from%202019-09-10%2016-19-58.png">
 
 <br>
 Trong đó:<br><pre>
