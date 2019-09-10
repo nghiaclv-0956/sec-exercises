@@ -131,11 +131,11 @@ Cài đặt và chạy HashPump:<br>
 
 
 <br>
-Trong đó:
-Input Signature: Chính là hashed cookie được web trả về, mặc định đúng vì được web hashed và gán cho Client.<br>
-Input data: Value dùng làm salt, ta biết được nhờ value của ship.<br>
-Input Key Length: Độ dài của value được băm, ta không biết được nội dung nhưng biết độ dài là 21 (chính là Flag).<br>
-Input Data to Add: Là dữ liệu muốn thêm vào để được một dữ liệu mới hợp lệ. Do mặc định mỗi khi Submit thì các value được hàm implode() nối thêm một dấu phẩy phía trước, nên value thêm vào ta điền <b>,10</b> <br>
+Trong đó:<br>
+<b>Input Signature</b>: Chính là hashed cookie được web trả về, mặc định đúng vì được web hashed và gán cho Client.<br>
+<b>Input data</b>: Value dùng làm salt, ta biết được nhờ value của ship.<br>
+<b>Input Key Length</b>: Độ dài của value được băm, ta không biết được nội dung nhưng biết độ dài là 21 (chính là Flag).<br>
+<b>Input Data to Add</b>: Là dữ liệu muốn thêm vào để được một dữ liệu mới hợp lệ. Do mặc định mỗi khi Submit thì các value được hàm implode() nối thêm một dấu phẩy phía trước, nên value thêm vào ta điền <b>,10</b> <br>
 
-Rất tiếc khi chạy thì không thành công, và vấn đề nằm ở đoạn:
-<artical>artical x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xb0,10 </artical> <br>
+Rất tiếc khi chạy thì không thành công, và vấn đề nằm ở đoạn: <br>
+<artical>  x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xb0,10 </artical> <br>
