@@ -103,10 +103,10 @@ if (isset($_POST['submit']))
 ```
 <br>
 Ta thấy Flag được lưu ở param $salt. <br>
-Nhìn vào đoạn code trên và xem Cookie của web, ta thấy rằng mỗi khi Submit, param $ship sẽ được random một value ngẫu nhiên từ 0 => 9. <br>
-Những param này sẽ được chuyển thành một string, ngăn cách bởi dấu "," nhờ vào hàm implode(), và được lưu vào param $s. <br>
-Param $sign sẽ chứa value khi hashing bằng SHA512 với data nằm ở param $salt và salt nằm ở param $s <br>
-Khi submit form, ta sẽ có 2 cookie là <b>ship</b> = $s  và <b>signature</b> = $sign
+Nhìn vào đoạn code trên và xem Cookie của web, ta thấy rằng mỗi khi Submit, param  <b>$ship</b> sẽ được random một value ngẫu nhiên từ 0 => 9. <br>
+Những param này sẽ được chuyển thành một string, ngăn cách bởi dấu "," nhờ vào hàm implode(), và được lưu vào param  <b>$s</b>. <br>
+Param  <b>$sign</b> sẽ chứa value khi hashing bằng SHA512 với data nằm ở param <b>$salt</b> và salt nằm ở param  <b>$s</b> <br>
+Khi submit form, ta sẽ có 2 cookie là <b>ship = $s</b>  và <b>signature = $sign</b>
 <br>
 <br>
 <br>
@@ -123,9 +123,9 @@ for ($i=0; $i<count($ship); $i++)
 ```
 
 <br>
-Nhìn vào đoạn source code trên, ta thấy không thể nào in ra được position số 10 (chứa $salt = Flag), do value $ship có max value =9 <br>
+Nhìn vào đoạn source code trên, ta thấy không thể nào in ra được position số 10 (chứa <b>$salt</b> = Flag), do value <b>$ship</b> có max value =9 <br>
 
-Vậy bây giờ phải làm sao đấy để ta có được value hashed với $s = 10, và nó dẫn dắt tới một loại tấn công tên "hash length extension attack" và tool được biết đến nhiều nhất là HashPump<br>
+Vậy bây giờ phải làm sao đấy để ta có được value hashed với <b>$s = 10</b>, và nó dẫn dắt tới một loại tấn công tên "hash length extension attack" và tool được biết đến nhiều nhất là <b>HashPump</b><br>
 
 Cài đặt và chạy HashPump:<br>
 
@@ -138,4 +138,5 @@ Trong đó:<br>
 <b>Input Data to Add</b>: Là dữ liệu muốn thêm vào để được một dữ liệu mới hợp lệ. Do mặc định mỗi khi Submit thì các value được hàm implode() nối thêm một dấu phẩy phía trước, nên value thêm vào ta điền <b>,10</b> <br>
 
 Rất tiếc khi chạy thì không thành công, và vấn đề nằm ở đoạn: <br>
-<artical>  x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xb0,10 </artical> <br>
+
+<pre><artical>  x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xb0,10 </artical> </pre><br>
