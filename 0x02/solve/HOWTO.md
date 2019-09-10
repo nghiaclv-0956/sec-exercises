@@ -49,7 +49,7 @@ Browser tự động tải về 1 file <b>database.db</b>, mở file lên ta có
 <b>BÀI 3</b>
 LINK: http://ksnctf.sweetduet.info/problem/31 <br>
 Gồm 1 trang có 2 Submit Button đơn giản và source code của nó.
-<pre>
+<artical>
 <?php
 $salt = 'FLAG_????????????????';
 $shipname = array(
@@ -106,4 +106,4 @@ for ($i=0; $i<count($ship); $i++)
     echo "<li>{$shipname[$ship[$i]]}</li>\n";
 
 ?>
-</pre>
+</artical>
