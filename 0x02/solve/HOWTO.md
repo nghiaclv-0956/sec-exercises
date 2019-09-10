@@ -47,6 +47,63 @@ Browser tự động tải về 1 file <b>database.db</b>, mở file lên ta có
 
 -----------------------------------------------------------------------------------------------------------------------------------<br>
 <b>BÀI 3</b>
-LINK: http://ksnctf.sweetduet.info/problem/31
+LINK: http://ksnctf.sweetduet.info/problem/31 <br>
 Gồm 1 trang có 2 Submit Button đơn giản và source code của nó.
+<pre>
+<?php
+$salt = 'FLAG_????????????????';
+$shipname = array(
+    'Nagato',
+    'Mutsu',
+    'Kongo',
+    'Hiei',
+    'Haruna',
+    'Kirishima',
+    'Fuso',
+    'Yamashiro',
+    'Ise',
+    'Hyuga',
+    "Yamato [Congratulations! The flag is $salt. ??????????????????????????????????????.]"
+);
 
+//  Check signature and read
+if (isset($_COOKIE['ship']) and
+    isset($_COOKIE['signature']) and
+    hash('sha512', $salt.$_COOKIE['ship']) === $_COOKIE['signature'])
+    $ship = explode(',', $_COOKIE['ship']);
+else
+    $ship = array();
+
+if (isset($_POST['submit']))
+{
+    //  Gacha
+    if ($_POST['submit'] === 'Gacha')
+    {
+        //  Yamato is ultra rare
+        $ship[] = mt_rand(0, count($shipname)-2);
+
+        $s = implode(',', $ship);
+        $sign = hash('sha512', $salt.$s);
+
+        setcookie('ship', $s);
+        setcookie('signature', $sign);
+    }
+
+    //  Clear
+    if ($_POST['submit'] === 'Clear')
+    {
+        setcookie('ship', '', 0);
+        setcookie('signature', '', 0);
+    }
+
+    header("Location: {$_SERVER['REQUEST_URI']}");
+    exit();
+}
+?>
+<?php
+
+for ($i=0; $i<count($ship); $i++)
+    echo "<li>{$shipname[$ship[$i]]}</li>\n";
+
+?>
+</pre>
