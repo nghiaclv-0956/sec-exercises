@@ -148,7 +148,7 @@ Rất tiếc khi chạy thì không thành công, và vấn đề nằm ở đo�
  </artical> </pre><br>
  Đọc README.MD của Hash Pump cũng không rõ phải làm sao <br>
  Và sau khi tìm kiếm một thời gian thì hóa ra phải thay <b>\x</b> bằng <b>%</b> <br>
- <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x02/images/timhieu.png">
+
  <br>
  F12 và gửi value mới, ta nhận được Flag: <br>
  <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x02/images/result3.png">
