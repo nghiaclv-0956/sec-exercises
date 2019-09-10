@@ -100,6 +100,9 @@ if (isset($_POST['submit']))
     exit();
 }
 ?>
+```
+<br>
+```php
 <?php
 
 for ($i=0; $i<count($ship); $i++)
