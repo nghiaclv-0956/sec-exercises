@@ -127,7 +127,8 @@ for ($i=0; $i<count($ship); $i++)
 <br>
 Nhìn vào đoạn source code trên, ta thấy không thể nào in ra được position số 10 (chứa <b>$salt</b> = Flag), do value <b>$ship</b> có max value =9 <br>
 
-Vậy bây giờ phải làm sao đấy để ta có được value hashed với <b>$s = 10</b>, và nó dẫn dắt tới một loại tấn công tên "hash length extension attack" và tool được biết đến nhiều nhất là <b>HashPump</b><br>
+Vậy bây giờ phải làm sao đấy để ta có được value hashed với <b>$s = 10</b>, và nó dẫn dắt tới một loại tấn công tên 
+<a href="https://en.wikipedia.org/wiki/Length_extension_attack">Length extension attack</a> và tool được biết đến nhiều nhất là <b>HashPump</b><br>
 
 Cài đặt và chạy HashPump:<br>
 <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x02/images/hashp.png">
@@ -150,4 +151,5 @@ Rất tiếc khi chạy thì không thành công, và vấn đề nằm ở đo�
  F12 và gửi value mới, ta nhận được Flag: <br>
  <img src="https://github.com/nghiaclv-0956/sec-exercises/blob/master/0x02/images/result3.png">
  <br> 
+ <br>
  <pre> FLAG_uc8qVFa8Sr6DwYVP </pre>
